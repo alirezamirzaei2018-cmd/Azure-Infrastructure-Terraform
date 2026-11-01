@@ -1,0 +1,42 @@
+
+#cloud-config
+
+package_update: true
+
+packages:
+  - nginx
+
+write_files:
+  - path: /var/www/html/index.html
+    permissions: '0644'
+    owner: root:root
+    content: |
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Northstar Consulting</title>
+        <style>
+          body {
+            background: #0f172a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 100px 20px;
+          }
+          h1 { color: #38bdf8; }
+          p { color: #cbd5e1; }
+        </style>
+      </head>
+      <body>
+        <h1>Northstar Consulting</h1>
+        <h2>Secure Cloud Infrastructure</h2>
+        <p>Deployed on Microsoft Azure using Terraform.</p>
+        <p>Infrastructure as Code | Security | Automation</p>
+      </body>
+      </html>
+
+runcmd:
+  - systemctl enable nginx
+  - systemctl restart nginx

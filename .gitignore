@@ -1,0 +1,26 @@
+
+# Terraform state (may contain sensitive data)
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.tfplan
+*.tfplan.*
+crash.log
+crash.*.log
+
+# Terraform local files
+.terraform/
+.terraform.tfstate.lock.info
+*.tfstate.lock.info
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local secrets
+.env
+.env.*
+*.pem
+*.key
+*.pfx
