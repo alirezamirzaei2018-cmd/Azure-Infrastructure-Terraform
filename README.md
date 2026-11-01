@@ -235,11 +235,10 @@ Additional screenshots: [Resource Group](screenshots/01-resource-group.png) and 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/azure-infrastructure-terraform.git
+git clone https://github.com/alirezamirzaei2018-cmd/azure-infrastructure-terraform.git
 cd azure-infrastructure-terraform
 ```
 
-Replace `YOUR_USERNAME` with your GitHub username.
 
 ### 2. Authenticate
 
